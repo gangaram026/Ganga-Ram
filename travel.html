@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+</head>
+<style>
+*{
+    margin: 5;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://media.cntraveler.com/photos/5e74f9de2e6ca30009d1d4fa/16:9/w_2560%2Cc_limit/Argentina-GettyImages-1146497849.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+}
+header h1{
+    font-size: 4rem;
+}
+header p{
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.xyz{
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background-color: #ae52b6;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: box-shadow 0.5s;
+    transition: background-color 0.5s;
+    transition: text-decoration 0.5s;
+}
+.xyz:hover{
+    background-color: #000000;
+    text-decoration: underline;
+
+    box-shadow:  2px 2px 8px #fff,  -2px -2px 8px #fff;
+}
+.btn.login{
+    font-size: 12px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: beige;
+    transition: color 0.2s;
+    transition: text-decoration 0.2s;
+}
+.btn.signup{
+    font-size: 12px;
+    text-decoration: none; 
+    font-weight: bold;
+    color: beige;
+    transition: color 0.2s;
+    transition: text-decoration 0.2s;
+}
+.btn.signup:hover{
+    text-decoration: underline;
+    color: #fd786e;
+}
+.btn.login:hover{
+    text-decoration: underline;
+    color: #fc786e;
+}
+nav{
+    background-color: burlywood;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav a {
+    padding: 0.2rem 2rem;
+    margin: 0 1rem;
+    border-radius: 50px;
+    background-color: rgba(0, 128, 128, 0.212);
+    color: #000000;
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 1.1rem;
+    position: sticky;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    transition: background-color 0.2s;
+}
+nav a:hover{
+    color: grey;
+    text-decoration: underline;
+    background-color: whitesmoke;
+}
+main{
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+main h1{
+    font-size: 2rem;
+    text-align: center;
+    color: #131212;
+}
+main h2{
+    font-size: 1rem;
+    text-align: center;
+    color: #00455a;
+    text-decoration: underline;
+}
+.post{
+    display: flex;
+    margin-bottom: 3rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px black;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+.post:hover{
+    box-shadow: inset 2px 2px 2px #918787;
+}
+.post img{
+    flex: 10 10 10%;
+    max-width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+.post-content{
+    flex: 1 1 60%;
+    padding: 1.5rem;
+}
+.post-content h2{
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color: rgb(61, 59, 59);
+}
+.post-content h3{
+    font-size: 0.8rem;
+    color: #131212;
+    text-align: right;
+}
+.post-content p{
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+.read-more{
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: color 0.1s;
+    transition: text-decoration 0.1s;
+}
+.read-more:hover{
+    color: #fd786e;
+    text-decoration: underline;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.808);
+    color: beige;
+}
+footer h1{
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-align: right;
+    margin: 0 120px;
+}
+footer p{
+    font-size: 14px;
+    text-align: right;
+    margin: 0 90px;
+}
+</style>
+<body>
+    <header>
+        <h1>Create your Travel Stories</h1>
+        <p>Uncover the beauty of every corner of the globe</p>
+        <a href="#" class="xyz">Start Your Blog</a>
+        <a href="#" class="btn login">Welcome Again! - Login</a>
+        <a href="#" class="btn signup">New Here - Signup</a>
+        
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Blogs</a>
+        <a href="#">Top Destinations</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact Us</a>        
+    </nav>
+    <main>
+        <h1>Famous Blogs</h1><br>
+        <div class="post">
+            <img src="https://static.vecteezy.com/system/resources/previews/026/909/901/non_2x/ai-generated-ai-generative-green-summer-spring-forest-tree-park-garden-nature-outdoor-adventure-landscape-background-with-path-road-graphic-art-photo.jpg" alt="Forest Adventure">
+            <div class="post-content">
+                <h2>Forest Adventure</h2>
+                <h3>-By GangaRam</h3>
+                <p>Step into a world of wonder as we explore the lush greenery, canopy, towering trees, and serene landscapes of the enchanted forest. Embark on thrilling jungle adventures with our challenging treks on the forests of Kerala during the summer days.</p>
+                <a href="#" class="read-more">Read more...</a>
+            </div>
+        </div>
+        <div class="post">
+            <img src="https://images.wallpapersden.com/image/download/desert-4k_bGpnaWWUmZqaraWkpJRobWllrWdma2U.jpg" alt="Sands of Thar">
+            <div class="post-content">
+                <h2>Sands of Thar</h2>
+                <h3>-By Sai</h3>
+                <p>Vast expand of golden sand and endless horizon, with scrotching sunrays in day and chilling cold in night under the blanket of stars. Thrilling experience by Camel rides and having camp fire.</p>
+                <a href="#" class="read-more">Read more...</a>
+            </div>
+        </div>
+        <div class="post">
+            <img src="https://t3.ftcdn.net/jpg/04/75/39/38/360_F_475393897_ESv2u4INYCKghQnql7gbQYa0Ya84ztt0.jpg" alt="The Himalayas">
+            <div class="post-content">
+                <h2>Adobe of Snow</h2>
+                <h3>-By Manishika</h3>
+                <p> A heaven for fantastic flora and fauna, the Indian Himalayas are a nature and wildlife lover's paradise. Wonderful nature and rare wildlife, with a chilling climate throughout the year...</p>
+                <a href="#" class="read-more">Read more...</a>
+            </div>
+        </div>
+        <div class="post">
+            <img src="https://cdn.pixabay.com/photo/2023/07/08/04/58/sunset-8113697_1280.jpg" alt="Beach">
+            <div class="post-content">
+                <h2>Shore of Happiness</h2>
+                <h3>-By Abdullah</h3>
+                <p>Enjoy the tide of the ocean current by having the majestic view of sunrise and sunset. Enjoying the waves washing feet.</p>
+                <a href="#" class="read-more">Read more...</a>
+            </div>
+        </div>
+        <h2>Recreate your travel Experience with Us☺</h2>
+    </main>
+    <footer>
+        <h1>Contact Us</h1>
+        <p>Phone no.- +00 1234567890 <br> Mail - xyz@abc.com</p>
+    </footer>
+</body>
+</html>
